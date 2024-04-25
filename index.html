@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Courses</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Online Courses</h1>
+        <nav>
+            <ul>
+                <li><a href="#" id="loginLink">Login</a></li>
+                <li><a href="#" id="signupLink">Sign Up</a></li>
+                <li><a href="#" id="adminLink">Admin Panel</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="mainContent">
+        <!-- Course Listings -->
+        <section id="coursesSection">
+            <h2>Courses</h2>
+            <ul id="coursesList">
+                <!-- Courses will be dynamically added here -->
+            </ul>
+        </section>
+        <!-- Login Form -->
+        <section id="loginForm" class="hidden">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="loginUsername" placeholder="Username">
+                <input type="password" id="loginPassword" placeholder="Password">
+                <button type="submit">Login</button>
+            </form>
+        </section>
+        <!-- Signup Form -->
+        <section id="signupForm" class="hidden">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <input type="text" id="signupUsername" placeholder="Username">
+                <input type="email" id="signupEmail" placeholder="Email">
+                <input type="password" id="signupPassword" placeholder="Password">
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
+        <!-- Admin Panel -->
+        <section id="adminPanel" class="hidden">
+            <h2>Admin Panel</h2>
+            <form id="createCourseForm">
+                <input type="text" id="courseTitle" placeholder="Course Title">
+                <textarea id="courseDescription" placeholder="Course Description"></textarea>
+                <input type="number" id="coursePrice" placeholder="Price">
+                <button type="submit">Create Course</button>
+            </form>
+        </section>
+    </div>
+    <div>
+        <h1>Create Article</h1>
+    <form action="/admin/courses/:courseId/articles" method="post">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" required><br>
+
+        <label for="content">Content:</label><br>
+        <textarea id="content" name="content" rows="4" cols="50" required></textarea><br>
+
+        <!-- Add a hidden input field to store the course ID -->
+        <input type="hidden" id="courseId" name="courseId" value="courseIdGoesHere">
+
+        <input type="submit" value="Create Article">
+    </form>
+    </div>
+    <div>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Courses</title>
+    <!-- Include your CSS file here -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="course-container">
+        <!-- Course cards will be dynamically generated here -->
+    </div>
+
+    <!-- Include your JavaScript file here -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
